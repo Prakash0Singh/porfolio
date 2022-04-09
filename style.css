@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cardo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+/* Navbar */
+nav{
+    height: 80px;
+    width: 100%;
+    background-image:url(dust.png) ;
+    background-size: cover;
+}
+nav ul{
+    float: right;
+    margin-right: 40px;
+}
+nav ul li{
+    display: inline-block;
+    margin: 0 8px;
+    line-height: 80px;
+}
+nav a{
+    color: black;
+    font-size: 18px;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    padding: 7px 10px;
+    border-radius: 3px;
+}
+#btn  a:hover{
+    color: aliceblue;
+    transition: .5s;
+}
+nav a:hover{
+    color: aliceblue;
+}
+nav #icon{
+    color: rgb(8, 8, 8);
+    font-size: 30px;
+    line-height: 80px;
+    float: right;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+/*Main page*/
+.main{
+   
+    height: 90vh;
+    background-image:url(dust.png) ;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.container{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    justify-content: space-around;
+}
+.box1{
+    width: 450px;
+    height: 286px;
+    /* background-color: #8dde24; */
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+}
+.box1 button{
+    width: 97px;
+    border-radius: 9px;
+    padding: 5px 0px;
+    box-shadow: 3px 1px;
+    cursor: pointer;
+    margin: 3px 5px;
+    background: #000;
+    color: #E1306C;
+    
+}
+.buttons button:hover{
+    color: #1DA1F2;
+    
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.text h1 {
+    margin-bottom: 10px;
+    font-family: 'Grape Nuts', cursive;
+    font-size: 39px;
+}
+.text p{
+margin-bottom: 10px;
+padding-left: 10px;
+font-family: 'Roboto', sans-serif;
+
+}
+.buttons{
+    display: flex;
+    flex-wrap: wrap;
+}
+.box2{
+    width: 335px;
+    height: 400px;
+    /* background-color: #274302; */
+}
+.box2 img{
+    width: 283px;
+    height: 390px
+
+}
+/*About Me*/
+.aboutme{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 50vh;
+    background-image:url(dust.png) ;
+    background-size: cover;
+
+}
+.introduction{
+    display: flex;
+    width: 400px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.introduction p{
+    font-family: 'Cardo', serif;
+    font-size: 20px;
+}
+.image #photo{
+    width: 270px;
+ 
+}
+/*Contact me*/
+.contactme{
+    height:40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-image:url(dust.png) ;
+    background-size: cover;
+}
+.contactme a{
+    margin: 0 60px;
+    cursor: pointer;
+}
+.fa-color{
+    color: rgb(0, 0, 0);
+}
+.instagram .fa-color:hover{
+    color: #E1306C;
+}
+/* .contactme a:hover{
+    color: black;
+} */
+.gmail .fa-color:hover{
+    color:rgb(201, 44, 25);
+}
+.twitter .fa-color:hover{
+    color:#1DA1F2;
+}
+.github .fa-color:hover{
+    color: black;
+}
+.linkedin .fa-color:hover{
+    color:rgb(0, 97, 146);
+}
+
+
+/*Media Qurey*/
+@media (max-width:1048px) {
+    nav ul{
+        margin-right: 20px;
+    }
+    nav a{
+        font-size:17px ;
+    }
+}
+@media (max-width:909px){
+    nav #icon{
+        display: block;
+    }
+    nav ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #00000072;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav a{
+        font-size: 20px;
+    }
+   a:hover{
+        border: none;
+        color:aliceblue;
+
+    }
+    nav ul.show{
+        left:0
+    }
+}
+@media(prefers-color-scheme:dark){
+    nav{
+        background-image:url(dust0.png) ;
+        background-size: cover;
+    }
+    nav a{
+        color:whitesmoke;
+    }
+    #btn  a:hover{
+        color: white;
+
+    }
+    nav #icon{
+        color: whitesmoke;
+    }
+    .text{
+        color:white;
+    }
+    .introduction{
+        color: white;
+    }
+    .box1 button{
+        background: white;
+        color:rgb(15, 12, 12);
+    }
+    .buttons button:hover{
+        color:black;
+        
+    }
+    .contactme{
+        color: white;
+        background-image:url(dust0.png) ;
+        background-size: cover; 
+    }
+    .aboutme{
+        background-image:url(dust0.png) ;
+        background-size: cover;
+    }
+    .main{
+        background-image:url(dust0.png) ;
+        background-size: cover;
+    }
+}
+.fa-color{
+    color: white;
+}
+.instagram .fa-color:hover{
+    color: #E1306C;
+}
+/* .contactme a:hover{
+    color: black;
+} */
+.gmail .fa-color:hover{
+    color:rgb(201, 44, 25);
+}
+.twitter .fa-color:hover{
+    color:#1DA1F2;
+}
+.github .fa-color:hover{
+    color: black;
+}
+.linkedin .fa-color:hover{
+    color:rgb(0, 97, 146);
+}
